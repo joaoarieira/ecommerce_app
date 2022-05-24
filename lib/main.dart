@@ -1,4 +1,6 @@
+import 'package:ecommerce_app/pages/product_detail_page.dart';
 import 'package:ecommerce_app/pages/products_overview_page.dart';
+import 'package:ecommerce_app/utils/app_routes.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -14,6 +16,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
+        fontFamily: 'Lato',
         primarySwatch: Colors.purple,
         colorScheme: theme.colorScheme.copyWith(
           primary: Colors.purple,
@@ -22,6 +25,9 @@ class MyApp extends StatelessWidget {
       ),
       home: ProductsOverviewPage(),
       debugShowCheckedModeBanner: false,
+      routes: {
+        AppRoutes.PRODUCT_DETAIL: (ctx) => ProductDetailPage(),
+      },
     );
   }
 }

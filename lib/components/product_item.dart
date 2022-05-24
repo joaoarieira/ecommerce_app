@@ -1,4 +1,6 @@
 import 'package:ecommerce_app/models/product.dart';
+import 'package:ecommerce_app/pages/product_detail_page.dart';
+import 'package:ecommerce_app/utils/app_routes.dart';
 import 'package:flutter/material.dart';
 
 class ProductItem extends StatelessWidget {
@@ -30,9 +32,23 @@ class ProductItem extends StatelessWidget {
             color: Theme.of(context).colorScheme.secondary,
           ),
         ),
-        child: Image.network(
-          product.imageUrl,
-          fit: BoxFit.cover,
+        child: GestureDetector(
+          // onTap: () {
+          //   // uma outra forma de navegação
+          //   Navigator.of(context).push(MaterialPageRoute(builder: (ctx) {
+          //     return ProductDetailPage(product: product);
+          //   }));
+          // },
+          onTap: () {
+            Navigator.of(context).pushNamed(
+              AppRoutes.PRODUCT_DETAIL,
+              arguments: product,
+            );
+          },
+          child: Image.network(
+            product.imageUrl,
+            fit: BoxFit.cover,
+          ),
         ),
       ),
     );
