@@ -27,10 +27,10 @@ class MyApp extends StatelessWidget {
             secondary: Colors.deepOrange,
           ),
         ),
-        home: ProductsOverviewPage(),
+        home: const ProductsOverviewPage(),
         debugShowCheckedModeBanner: false,
         routes: {
-          AppRoutes.PRODUCT_DETAIL: (ctx) => ProductDetailPage(),
+          AppRoutes.PRODUCT_DETAIL: (ctx) => const ProductDetailPage(),
         },
       ),
     );
