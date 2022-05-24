@@ -2,8 +2,8 @@ class Product {
   final String id;
   final String title;
   final String description;
-  final String price;
   final String imageUrl;
+  final double price;
   bool isFavorite;
 
   Product({
