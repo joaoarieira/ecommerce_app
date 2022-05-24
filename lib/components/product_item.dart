@@ -19,11 +19,15 @@ class ProductItem extends StatelessWidget {
             product.title,
             textAlign: TextAlign.center,
           ),
-          trailing: const Icon(Icons.shopping_cart),
+          trailing: Icon(
+            Icons.shopping_cart,
+            color: Theme.of(context).colorScheme.secondary,
+          ),
           backgroundColor: Colors.black87,
           leading: IconButton(
             onPressed: () {},
             icon: const Icon(Icons.favorite),
+            color: Theme.of(context).colorScheme.secondary,
           ),
         ),
         child: Image.network(
